@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>孤街旧巷</title>
+  
+  <subtitle>实践不经意的仁慈与不自觉的美德！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.danejiang.top/"/>
+  <updated>2019-04-20T05:54:36.263Z</updated>
+  <id>https://www.danejiang.top/</id>
+  
+  <author>
+    <name>DaneJiang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ServiceMix环境搭建</title>
+    <link href="https://www.danejiang.top/2019/04/20/servicemix-setup/"/>
+    <id>https://www.danejiang.top/2019/04/20/servicemix-setup/</id>
+    <published>2019-04-19T16:43:16.000Z</published>
+    <updated>2019-04-20T05:54:36.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于项目需要，准备用ServiceMix搭建一个ESB服务，用于各系统之间数据接口的通讯；Apache ServiceMix是小巧的开源集成容器，它结合了Apache ActiveMQ、Camel、CXF和Karaf的特性和功能到一个强大的运行平台，你可以用它构建属于自己的集成解决方案。它提供了一个由OSGI技术支持的 全面的企业预备ESB。</p><a id="more"></a><p>下面简单介绍下ServiceMix环境搭建的几个步骤：<br>1.首先登陆官网下载安装包，并放到Linux服务器上：<br><a href="http://mirrors.tuna.tsinghua.edu.cn/apache/servicemix/servicemix-7/7.0.1/apache-servicemix-7.0.1.zip" target="_blank" rel="noopener">ServiceMix安装包下载</a></p><p>登录安装包所在目录，解压文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf apache-servicemix-7.0.1.zip</span><br></pre></td></tr></table></figure></p><p>输入如下命令，启动ServiceMix：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/start</span><br></pre></td></tr></table></figure></p><p>输入如下命令，进入karaf：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/client</span><br></pre></td></tr></table></figure></p><p><img src="/images/servicemix.jpg" alt></p><p>2.输入如下命令，添加hawtio资源：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feature:repo-add hawtio</span><br></pre></td></tr></table></figure></p><p>再输入如下命令，安装hawtio组件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feature:install hawtio</span><br></pre></td></tr></table></figure></p><p>安装完后通过访问http://服务器IP:8181，来查看ServiceMix的组件状态和日志：</p><div align="left"><img src="/images/hawtio.jpg" alt></div><p>3.输入如下命令安装wrapper，该组件提供开机自启动的相关命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrapper:install</span><br></pre></td></tr></table></figure></p><p> 安装完成后，输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrapper</span><br></pre></td></tr></table></figure></p><p>执行完成后，出现如下提示，按系统设置开机启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* To install the service:</span><br><span class="line">*     $ ln -s /opt/apache-servicemix-7.0.1/bin/karaf-service /etc/init.d/</span><br><span class="line">* </span><br><span class="line">*   To start the service when the machine is rebooted:</span><br><span class="line">*     $ update-rc.d karaf-service defaults</span><br><span class="line">* </span><br><span class="line">*   To disable starting the service when the machine is rebooted:</span><br><span class="line">*     $ update-rc.d -f karaf-service remove</span><br><span class="line">* </span><br><span class="line">*   To start the service:</span><br><span class="line">*     $ /etc/init.d/karaf-service start</span><br><span class="line">* </span><br><span class="line">*   To stop the service:</span><br><span class="line">*     $ /etc/init.d/karaf-service stop</span><br><span class="line">* </span><br><span class="line">*   To uninstall the service :</span><br><span class="line">*     $ rm /etc/init.d/karaf-service</span><br></pre></td></tr></table></figure></p><p>4.安装需要使用的组件，目前我用jetty发布http服务，所以需要安装如下两个组件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">feature:install camel-http</span><br><span class="line">feature:install camel-jetty9</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于项目需要，准备用ServiceMix搭建一个ESB服务，用于各系统之间数据接口的通讯；Apache ServiceMix是小巧的开源集成容器，它结合了Apache ActiveMQ、Camel、CXF和Karaf的特性和功能到一个强大的运行平台，你可以用它构建属于自己的集成解决方案。它提供了一个由OSGI技术支持的 全面的企业预备ESB。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ServiceMix" scheme="https://www.danejiang.top/categories/ServiceMix/"/>
+    
+    
+      <category term="ServiceMix" scheme="https://www.danejiang.top/tags/ServiceMix/"/>
+    
+      <category term="Karaf" scheme="https://www.danejiang.top/tags/Karaf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.danejiang.top/2019/04/19/hello-world/"/>
+    <id>https://www.danejiang.top/2019/04/19/hello-world/</id>
+    <published>2019-04-19T12:00:00.000Z</published>
+    <updated>2019-04-19T14:59:40.602Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World!</span><br></pre></td></tr></table></figure><p>我的开篇标题，觉得很适合我这种技术宅！</p><p>十年，回想自己的第一个网站和博客，当时的心情很单纯，只想做一个编程技术资料和经验分享的网站；每天不停的访问着自己写的程序，到处推广自己的站点，不断的做SEO优化，看着被谷歌收录的页面逐渐变多，心情无比激动；但持续了一年左右，激情没了，加上网站的美工不行，网站一直没什么人访问，最后放弃了。</p><a id="more"></a><p>虽然有时还会搜索下自己以前的网页，但十年来一直没有下定决心再写一次博客；十年的时间，自己的编程技术略有增长，学习的领域已经有了翻天覆地的变化，目前正在学习大数据相关的技术，后续的文章中我会把学习的经验分享出来。</p><p>此次写博客，不追求形式、内容和时间，想写就写，只希望能记录一些自己在人生路上的点点滴滴，下一个十年来看时不会后悔！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Hello World!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;我的开篇标题，觉得很适合我这种技术宅！&lt;/p&gt;
+&lt;p&gt;十年，回想自己的第一个网站和博客，当时的心情很单纯，只想做一个编程技术资料和经验分享的网站；每天不停的访问着自己写的程序，到处推广自己的站点，不断的做SEO优化，看着被谷歌收录的页面逐渐变多，心情无比激动；但持续了一年左右，激情没了，加上网站的美工不行，网站一直没什么人访问，最后放弃了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://www.danejiang.top/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="日记" scheme="https://www.danejiang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="杂谈" scheme="https://www.danejiang.top/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+</feed>
