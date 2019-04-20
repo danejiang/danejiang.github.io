@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.danejiang.top/images/servicemix.jpg">
 <meta property="og:image" content="https://www.danejiang.top/images/hawtio.jpg">
-<meta property="og:updated_time" content="2019-04-20T05:54:36.263Z">
+<meta property="og:updated_time" content="2019-04-20T12:52:30.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ServiceMix环境搭建">
 <meta name="twitter:description" content="由于项目需要，准备用ServiceMix搭建一个ESB服务，用于各系统之间数据接口的通讯；Apache ServiceMix是小巧的开源集成容器，它结合了Apache ActiveMQ、Camel、CXF和Karaf的特性和功能到一个强大的运行平台，你可以用它构建属于自己的集成解决方案。它提供了一个由OSGI技术支持的 全面的企业预备ESB。">
@@ -424,7 +424,7 @@
                 
               
 
-              <time title="创建时间：2019-04-20 00:43:16 / 修改时间：13:54:36" itemprop="dateCreated datePublished" datetime="2019-04-20T00:43:16+08:00">2019-04-20</time>
+              <time title="创建时间：2019-04-20 00:43:16 / 修改时间：20:52:30" itemprop="dateCreated datePublished" datetime="2019-04-20T00:43:16+08:00">2019-04-20</time>
             
 
             
@@ -507,9 +507,10 @@
       
         <p>由于项目需要，准备用ServiceMix搭建一个ESB服务，用于各系统之间数据接口的通讯；Apache ServiceMix是小巧的开源集成容器，它结合了Apache ActiveMQ、Camel、CXF和Karaf的特性和功能到一个强大的运行平台，你可以用它构建属于自己的集成解决方案。它提供了一个由OSGI技术支持的 全面的企业预备ESB。</p>
 <a id="more"></a>
-<p>下面简单介绍下ServiceMix环境搭建的几个步骤：<br>1.首先登陆官网下载安装包，并放到Linux服务器上：<br><a href="http://mirrors.tuna.tsinghua.edu.cn/apache/servicemix/servicemix-7/7.0.1/apache-servicemix-7.0.1.zip" target="_blank" rel="noopener">ServiceMix安装包下载</a></p>
-<p>登录安装包所在目录，解压文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf apache-servicemix-7.0.1.zip</span><br></pre></td></tr></table></figure></p>
-<p>输入如下命令，启动ServiceMix：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/start</span><br></pre></td></tr></table></figure></p>
+<p>下面简单介绍下ServiceMix环境搭建的几个步骤：</p>
+<p>1.首先登陆官网下载安装包，并放到Linux服务器上：<br><a href="http://servicemix.apache.org/downloads.html" target="_blank" rel="noopener">ServiceMix安装包页面</a></p>
+<p>SSH登录服务器，进入安装包所在目录并解压文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf apache-servicemix-7.0.1.tar</span><br></pre></td></tr></table></figure></p>
+<p>进入目录apache-servicemix-7.0.1，输入如下命令，启动ServiceMix：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd apache-servicemix-7.0.1/</span><br><span class="line">bin/start</span><br></pre></td></tr></table></figure></p>
 <p>输入如下命令，进入karaf：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/client</span><br></pre></td></tr></table></figure></p>
 <p><img src="/images/servicemix.jpg" alt></p>
 <p>2.输入如下命令，添加hawtio资源：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feature:repo-add hawtio</span><br></pre></td></tr></table></figure></p>
