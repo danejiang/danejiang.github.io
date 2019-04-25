@@ -5,9 +5,9 @@
   <subtitle>实践不经意的仁慈与不自觉的美德！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.danejiang.top/"/>
+  <link href="https://danejiang.top/"/>
   <updated>2019-04-24T03:00:05.142Z</updated>
-  <id>https://www.danejiang.top/</id>
+  <id>https://danejiang.top/</id>
   
   <author>
     <name>DaneJiang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>ServiceMix部署自定义开发程序(ActiveMQ和Kafka实现)</title>
-    <link href="https://www.danejiang.top/2019/04/24/servicemix-example/"/>
-    <id>https://www.danejiang.top/2019/04/24/servicemix-example/</id>
+    <link href="https://danejiang.top/2019/04/24/servicemix-example/"/>
+    <id>https://danejiang.top/2019/04/24/servicemix-example/</id>
     <published>2019-04-24T01:45:25.000Z</published>
     <updated>2019-04-24T03:00:05.142Z</updated>
     
@@ -31,21 +31,21 @@
     
     </summary>
     
-      <category term="ServiceMix" scheme="https://www.danejiang.top/categories/ServiceMix/"/>
+      <category term="ServiceMix" scheme="https://danejiang.top/categories/ServiceMix/"/>
     
     
-      <category term="ServiceMix" scheme="https://www.danejiang.top/tags/ServiceMix/"/>
+      <category term="ServiceMix" scheme="https://danejiang.top/tags/ServiceMix/"/>
     
-      <category term="ActiveMQ" scheme="https://www.danejiang.top/tags/ActiveMQ/"/>
+      <category term="ActiveMQ" scheme="https://danejiang.top/tags/ActiveMQ/"/>
     
-      <category term="Kafka" scheme="https://www.danejiang.top/tags/Kafka/"/>
+      <category term="Kafka" scheme="https://danejiang.top/tags/Kafka/"/>
     
   </entry>
   
   <entry>
     <title>闲暇好风光</title>
-    <link href="https://www.danejiang.top/2019/04/20/20190420/"/>
-    <id>https://www.danejiang.top/2019/04/20/20190420/</id>
+    <link href="https://danejiang.top/2019/04/20/20190420/"/>
+    <id>https://danejiang.top/2019/04/20/20190420/</id>
     <published>2019-04-20T10:53:33.000Z</published>
     <updated>2019-04-24T06:54:03.101Z</updated>
     
@@ -60,17 +60,17 @@
     
     </summary>
     
-      <category term="杂谈" scheme="https://www.danejiang.top/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://danejiang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="日记" scheme="https://www.danejiang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+      <category term="日记" scheme="https://danejiang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>ServiceMix环境搭建</title>
-    <link href="https://www.danejiang.top/2019/04/20/servicemix-setup/"/>
-    <id>https://www.danejiang.top/2019/04/20/servicemix-setup/</id>
+    <link href="https://danejiang.top/2019/04/20/servicemix-setup/"/>
+    <id>https://danejiang.top/2019/04/20/servicemix-setup/</id>
     <published>2019-04-19T16:43:16.000Z</published>
     <updated>2019-04-20T12:52:30.454Z</updated>
     
@@ -82,19 +82,19 @@
     
     </summary>
     
-      <category term="ServiceMix" scheme="https://www.danejiang.top/categories/ServiceMix/"/>
+      <category term="ServiceMix" scheme="https://danejiang.top/categories/ServiceMix/"/>
     
     
-      <category term="ServiceMix" scheme="https://www.danejiang.top/tags/ServiceMix/"/>
+      <category term="ServiceMix" scheme="https://danejiang.top/tags/ServiceMix/"/>
     
-      <category term="Karaf" scheme="https://www.danejiang.top/tags/Karaf/"/>
+      <category term="Karaf" scheme="https://danejiang.top/tags/Karaf/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://www.danejiang.top/2019/04/19/hello-world/"/>
-    <id>https://www.danejiang.top/2019/04/19/hello-world/</id>
+    <link href="https://danejiang.top/2019/04/19/hello-world/"/>
+    <id>https://danejiang.top/2019/04/19/hello-world/</id>
     <published>2019-04-19T12:00:00.000Z</published>
     <updated>2019-04-19T14:59:40.602Z</updated>
     
@@ -108,12 +108,12 @@
     
     </summary>
     
-      <category term="杂谈" scheme="https://www.danejiang.top/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://danejiang.top/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="日记" scheme="https://www.danejiang.top/tags/%E6%97%A5%E8%AE%B0/"/>
+      <category term="杂谈" scheme="https://danejiang.top/tags/%E6%9D%82%E8%B0%88/"/>
     
-      <category term="杂谈" scheme="https://www.danejiang.top/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="日记" scheme="https://danejiang.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
